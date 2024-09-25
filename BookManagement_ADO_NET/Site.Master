@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BookManagement_ADO_NET.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <link rel="stylesheet" href="Content/Site.css"/>
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <nav>
+            <div class="container">
+                <a runat="server" href="~/">Book Management</a>
+                <div>
+                    <ul>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Default.aspx">Home Page</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/AddEditBook.aspx">Add Books</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/BookList.aspx">View Books</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+</html>

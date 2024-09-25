@@ -1,0 +1,87 @@
+﻿
+body {
+    font-family: Algerian;
+    background-color: #ff6f20;
+    color: #ff6f20;
+    background: url("../Assert/img/books.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #ff6f20;
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+header h1 
+{
+     font-size: 90px;
+}
+
+header p 
+{
+     font-size: 34px;
+     margin: 20px 0;
+     text-align: center;
+ }
+
+.btn 
+{
+    background: #ff6f20;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover 
+{
+    background: #ff8a3d;
+    transform: translateY(-2px);
+}
+
+nav 
+{
+    background-color: #ff6f20b9;
+    padding: 25px 0px;
+}
+
+.container 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+a 
+{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 550;
+    font-family: Algerian;
+}
+
+a:hover 
+{
+    color: #808080;
+}
+
+ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item 
+{
+    margin-left: 20px;
+}
