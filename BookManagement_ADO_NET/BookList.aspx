@@ -9,7 +9,7 @@
 <body>
     <a href="AddEditBook.aspx" id="btn"><</a><br/><br/>
     <form id="form1" runat="server">
-            <asp:GridView ID="GridViewed" runat="server" AutoGenerateColumns="False"  OnRowEditing="Edit_Book"  OnRowUpdating="Update_Book" OnRowCancelingEdit="Cancel_Book" OnRowDeleting="Delete_Book" DataKeyNames="Id">
+            <asp:GridView ID="GridViewed" runat="server" AutoGenerateColumns="False"  OnRowEditing="Edit_Book" OnRowDeleting="Delete_Book" DataKeyNames="Id">
                 <Columns>
                     <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" />
                     <asp:TemplateField HeaderText="UserName">

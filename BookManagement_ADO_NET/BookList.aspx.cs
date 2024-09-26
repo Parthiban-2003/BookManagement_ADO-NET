@@ -22,6 +22,7 @@ namespace BookManagement_ADO_NET
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
+                con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Books", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -41,38 +42,6 @@ namespace BookManagement_ADO_NET
             Response.Redirect($"AddEditBook.aspx?id={bookId}");
         }
 
-        protected void Update_Book(object sender, GridViewUpdateEventArgs e)
-        {
-            int bookId = Convert.ToInt32(GridViewed.DataKeys[e.RowIndex].Value);
-
-            TextBox txtUserName = (TextBox)GridViewed.Rows[e.RowIndex].FindControl("txtUserName");
-            TextBox txtTitle = (TextBox)GridViewed.Rows[e.RowIndex].FindControl("txtTitle");
-            TextBox txtAuthor = (TextBox)GridViewed.Rows[e.RowIndex].FindControl("txtAuthor");
-            TextBox txtISBN = (TextBox)GridViewed.Rows[e.RowIndex].FindControl("txtISBN");
-
-            using (SqlConnection con = new SqlConnection(connectionString))
-            {
-                SqlCommand cmd = new SqlCommand("UPDATE Books SET UserName=@UserName, Title=@Title, Author=@Author, ISBN=@ISBN WHERE Id=@Id", con);
-                cmd.Parameters.AddWithValue("@Id", bookId);
-                cmd.Parameters.AddWithValue("@UserName", txtUserName.Text);
-                cmd.Parameters.AddWithValue("@Title", txtTitle.Text);
-                cmd.Parameters.AddWithValue("@Author", txtAuthor.Text);
-                cmd.Parameters.AddWithValue("@ISBN", txtISBN.Text);
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-
-            GridViewed.EditIndex = -1;
-            BindGrid();
-        }
-
-        protected void Cancel_Book(object sender, GridViewCancelEditEventArgs e)
-        {
-            GridViewed.EditIndex = -1;
-            BindGrid();
-        }
         protected void Delete_Book(object sender, EventArgs e)
         {
             LinkButton lnkDelete = (LinkButton)sender;

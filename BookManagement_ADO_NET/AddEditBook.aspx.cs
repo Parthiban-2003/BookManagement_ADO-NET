@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BookManagement_ADO_NET
 {
     public partial class AddEditBook : System.Web.UI.Page
     {
-        public string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["BookBankDB"].ConnectionString;
+        public string connectionString = ConfigurationManager.ConnectionStrings["BookBankDB"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
