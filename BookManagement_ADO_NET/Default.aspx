@@ -5,6 +5,6 @@
    <header>
         <h1>Library Book Bank (எழுத்து களஞ்சியம்)</h1>
         <p>Your gateway to a world of knowledge.</p>
-        <a href="~/Default.aspx" class="btn">Explore Features</a>
+        <a href="~/Default.aspx" class="btn">Explore Features</a> 
     </header>
 </asp:Content>

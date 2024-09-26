@@ -26,7 +26,7 @@
                 <div>
                     <ul>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Default.aspx">Home Page</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/AddEditBook.aspx">Add Books</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/AddEditBook.aspx">Add Books</a></li> 
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/BookList.aspx">View Books</a></li>
                     </ul>
                 </div>
